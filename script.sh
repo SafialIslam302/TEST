@@ -20,4 +20,4 @@
   module load gcc/11.2.0
 
   # Actual work starting here.
-  srun ./hello_world_mpi
+  srun ./hello_world_omp
