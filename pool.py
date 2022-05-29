@@ -1,8 +1,17 @@
-from multiprocessing import Pool
+# Solve the quadratic equation ax**2 + bx + c = 0
 
-def f(x):
-    return x*x
+# import complex math module
+import cmath
 
-if __name__ == '__main__':
-    with Pool(5) as p:
-        print(p.map(f, [1, 2, 3])
+a = 1
+b = 5
+c = 6
+
+# calculate the discriminant
+d = (b**2) - (4*a*c)
+
+# find two solutions
+sol1 = (-b-cmath.sqrt(d))/(2*a)
+sol2 = (-b+cmath.sqrt(d))/(2*a)
+
+print('The solution are {0} and {1}'.format(sol1,sol2))
